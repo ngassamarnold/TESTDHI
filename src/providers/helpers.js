@@ -1,4 +1,4 @@
-const fixedValue = 2;
+const fixedValue = 0;
 
 export function fixedNumber(value) {
     return value.toFixed(fixedValue);

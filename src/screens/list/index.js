@@ -9,10 +9,13 @@ import { productListStyles } from 'src/assets/styles';
 
 class ProductList extends PureComponent {
     static navigationOptions = {
-        headerTitle: 'Shopping cart!!',
+        headerTitle: 'Test DHI',
         headerRight: (
             <CartIcon />
-        )
+        ),
+        headerStyle: {
+            backgroundColor: '#f4511e',
+          }
     }
 
     constructor(props) {

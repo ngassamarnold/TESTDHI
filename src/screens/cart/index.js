@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { View, FlatList } from 'react-native';
+import { View, FlatList,Text } from 'react-native';
 import { connect } from 'react-redux';
 import { withNavigation } from 'react-navigation'
 import Product from 'src/screens/list/Product';
@@ -10,10 +10,22 @@ class Cart extends PureComponent {
     constructor(props) {
         super(props);
     }
+    static navigationOptions = {
+        headerTitle: 'Panier',
+        
+        headerStyle: {
+            backgroundColor: '#f4511e',
+          }
+    }
 
     onKeyExtractor = (item, index) => index.toString();
 
-    
+    UNSAFE_componentWillMount(){
+        console.warn("xxxxxxxxxcxxxxxx");
+        console.log("loglogloglogloglogloglog");
+        //alert('ok');
+        console.warn(this.props.cartReducers) 
+    }
     render() {
         return (
             <View style={{ flex: 1, justifyContent: 'center', flexDirection: 'column' }}>

@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import { View, Text, TouchableWithoutFeedback } from 'react-native';
-//import { getTheme } from 'react-native-material-kit';
+import { getTheme } from 'react-native-material-kit';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { fixedNumber } from 'src/providers/helpers';
 import { productStyles } from 'src/assets/styles';
 import { connect } from 'react-redux';
 
-//const theme = getTheme();
+const theme = getTheme();
 
 class Product extends PureComponent {
     constructor(props) {
@@ -29,7 +29,7 @@ class Product extends PureComponent {
         if (this.props.showDetails) {
             return (
                 <Text style={productStyles.price}>
-                    Subtotal: ${fixedNumber(this.props.detail.price * this.props.detail.quantity)}
+                    Sous total: {fixedNumber(this.props.detail.price * this.props.detail.quantity)}ƒcfa
                 </Text>
             );
         }
@@ -39,7 +39,7 @@ class Product extends PureComponent {
         if (this.props.showDetails) {
             return (
                 <Text style={productStyles.price}>
-                    Quant.: {this.props.detail.quantity}
+                    Quantité.: {this.props.detail.quantity}
                 </Text>
             );
         }
@@ -83,7 +83,13 @@ class Product extends PureComponent {
                     {this.props.detail.name}
                 </Text>
                 <Text style={productStyles.price}>
-                    Price: ${fixedNumber(this.props.detail.price)}
+                    Prix: {fixedNumber(this.props.detail.price)}ƒcfa
+                </Text>
+                <Text style={productStyles.price}>
+                    Categorie: {this.props.detail.categorie}
+                </Text>
+                <Text style={productStyles.price}>
+                    Quantité: {this.props.detail.quantite}
                 </Text>
                 {
                     this.showQuantity()
@@ -97,7 +103,7 @@ class Product extends PureComponent {
 
     render() {
         return (
-            <View style={[ productStyles.mainContainer]}>
+            <View style={[theme.cardStyle, productStyles.mainContainer]}>
                 <View style={productStyles.productContainer}>
                     <Icon
                         name={this.setIconName()}

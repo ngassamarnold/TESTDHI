@@ -47,3 +47,34 @@ export const productListStyles = StyleSheet.create({
         backgroundColor: 'gray'
     }
 });
+
+export const orders= StyleSheet.create({
+    textInput: {
+      
+        fontSize: 12,
+        color: '#333',
+        width: '100%',
+       // backgroundColor:'green',
+
+        borderRadius: 2,
+        borderColor:"yellow",
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+      },
+      textView: {
+        marginHorizontal: 20,
+        marginBottom: 10,
+        color:'red',
+      },
+      label: {
+        fontSize: 12,
+        color: '#333',
+        marginBottom: 10,
+        paddingHorizontal: 5,
+      },
+      section: {
+        flex: 1,
+        paddingVertical: 30,
+        backgroundColor: '#fff'
+      },
+});

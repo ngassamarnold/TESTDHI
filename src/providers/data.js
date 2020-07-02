@@ -1,22 +1,31 @@
 export const products = [
     {
-        name: "Sledgehammer",
-        price: 125.75
+        id: 1,
+        categorie: "Sucrerie",
+        name: "Cool Bonbon",
+        quantite: 45,
+        price: 25,
     },
     {
-        name: "Axe",
-        price: 190.50
+        id: 2,
+        categorie: "Boisson",
+        name: "Cool Jus",
+        quantite: 60,
+        price: 1,
     },
     {
-        name: "Bandsaw",
-        price: 562.13
-    }, {
-        name: "Chisel",
-        price: 12.9
+        id: 3,
+        categorie: "Sucrerie",
+        name: "Cool Biscuit",
+        quantite: 2,
+        price: 50,
     },
     {
-        name: "Hacksaw",
-        price: 18.45
+        id: 4,
+        categorie: "Sucrerie",
+        name: "Cool Chocolat",
+        quantite: 0,
+        price: 100,
     }
 ]
 
