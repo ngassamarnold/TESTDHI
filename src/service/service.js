@@ -8,8 +8,8 @@ var configs = {
 
     }
 };
-export const URL2 = "http://helpstofind.fr/test2/api/";
-export const URL = "https://my-coolpay.com/api/409dfb2f-f98f-4f97-9584-0d2bf1573571/paylink";
+ const URL2 = "http://helpstofind.fr/test2/api/";
+ const URL = "https://my-coolpay.com/api/409dfb2f-f98f-4f97-9584-0d2bf1573571/paylink";
 //pour demander un paiment
 export function loadProducts(body) {
     return Axios.post(URL,
@@ -24,9 +24,9 @@ export function insertCMD(body) {
 )
 }
 
-export const CountryWorker = {
-    getAllCountries: async () => {
-      return await fetch("http://helpstofind.fr/test2/api/produits")
+export const ConstProduct = {
+    getProduct: async () => {
+      return await fetch(URL2+"produits")
         .then((response) => response.json())
         .then((json) => {
           if (json.length != 0) {
@@ -38,22 +38,4 @@ export const CountryWorker = {
         .catch((error) => console.warn(error));
     },
   };
-
-//   export const CountryWorker = {
-//     getAllCountries: async () => {
-//       return await fetch("https://restcountries.eu/rest/v1/all")
-//         .then((response) => response.json())
-//         .then((json) => {
-//           if (json.length != 0) {
-//             const data = {};
-//             for (const country of json) {
-//               data[`${country.alpha2Code}`] = country.name;
-//             }
-//             return data;
-//           }
-//           callback({});
-//         })
-//         .catch((error) => console.warn(error));
-//     },
-//   };
 
